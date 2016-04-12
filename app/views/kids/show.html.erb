@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+<br><br>
+<p>
+  <strong>Name:</strong>
+  <%= @kid.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @kid.age %>
+</p>
+
+<p>
+  <strong>Hight:</strong>
+  <%= @kid.hight %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @kid.weight %>
+</p>
+
+<p>
+  <strong>Hobby:</strong>
+  <%= @kid.hobby %>
+</p>
+
+<%= link_to 'Edit', edit_kid_path(@kid) %> |
+<%= link_to 'Back', kids_path %>

@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+<br><br><br>
+<h1>Listing Kids</h1>
+<% @kids.each do |kid| %>
+<table class="table">
+  
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Hight</th>
+        <th>Weight</th>
+        <th>Hobby</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= kid.name %></td>
+        <td><%= kid.age %></td>
+        <td><%= kid.hight %></td>
+        <td><%= kid.weight %></td>
+        <td><%= kid.hobby %></td>
+      </tr>
+    </tbody>
+  </table>
+      <tr>
+        <button class="btn btn-default" type="submit"><%= link_to 'Show', kid %></button>
+        <button class="btn btn-default" type="submit"><%= link_to 'Edit', edit_kid_path(kid) %></button>
+        <button class="btn btn-default" type="submit"><%= link_to 'Delete', kid, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br><br>
+<button class="btn btn-default" type="submit"><%= link_to 'New Kid', new_kid_path %></button>
+
